@@ -330,7 +330,7 @@ class HTTPConnectionPool(ConnectionPool, RequestMethods):
                         "Pool reached maximum size and no more connections are allowed.",
                     ) from None
 
-                log.warning(
+                log.debug(
                     "Connection pool is full, discarding connection: %s. Connection pool size: %s",
                     self.host,
                     self.pool.qsize(),
